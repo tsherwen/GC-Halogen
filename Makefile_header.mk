@@ -1275,7 +1275,7 @@ ifeq ($(COMPILER_FAMILY),Intel)
   # Turn on OpenMP parallelization
   REGEXP             :=(^[Yy]|^[Yy][Ee][Ss])
   ifeq ($(shell [[ "$(OMP)" =~ $(REGEXP) ]] && echo true),true)
-    FFLAGS           += -openmp
+    FFLAGS           += -qopenmp
   endif
 
   # Get Operating System (Linux = Linux; Darwin = MacOSX)
